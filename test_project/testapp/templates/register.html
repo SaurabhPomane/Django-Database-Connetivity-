@@ -1,0 +1,57 @@
+<html>
+    <head>
+<style>
+    input{
+        display: block;
+        padding: 6px;
+        margin: 10px;
+        text-align:left}
+   
+</style>
+
+<script>
+
+    var xmlhttp;
+
+    function validate()
+    {
+            var username=document.registerform.username.value;
+
+            xmlhttp=new XMLHttpRequest();
+
+            xmlhttp.open("get","/testapp/check?username="+username)
+
+            xmlhttp.onload=readResponse;
+            xmlhttp.send();
+    }
+
+
+    function readResponse()
+    {
+        var jsondata=xmlhttp.responseText;
+
+        var obj=JSON.parse(jsondata)
+
+        document.getElementById("message").innerHTML=obj.message;
+    }
+
+
+</script>
+
+</head>
+<body class="body">
+<span id="message" style="color: red;"></span> 
+
+<form name="registerform">
+    <h1>Register Page</h1>
+ <input name="username" placeholder="Enter username" onblur="validate()">
+ <input name="password" placeholder="Enter password" type="password">
+ <input name="mobno" placeholder="Enter mobile number">
+<input type="submit" value="submit"  formaction="/testapp/save/"  formmethod="post">
+<span>user already register </span>
+<input type="submit" value="login" formaction="/testapp/login/">
+{% csrf_token %}
+
+</body>
+</form>
+</html>

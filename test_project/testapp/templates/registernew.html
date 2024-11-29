@@ -1,0 +1,19 @@
+<form action="/testapp/saveUserData/" method="POST" name="registerForm" enctype="multipart/form-data">
+    
+    {% csrf_token %}
+
+    
+    <input name="username" placeholder="Enter username"><br><br>
+
+    <input type="password" name=password placeholder="Enter password"><br><br>
+
+    <input name=mobno placeholder="Enter mobile number"><br><br>
+
+    <input type="email" name=email placeholder="Enter email id"><br><br>
+
+    <input type="file" name="photo"><br><br><br><br>
+    
+    <input type="submit" value="register">
+
+
+</form>

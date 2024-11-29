@@ -1,0 +1,18 @@
+<form>
+
+    <input name="username" placeholder="Enter username"> <br>
+
+    <input type="password" name=password placeholder="Enter password"><br>
+
+    <br><br>
+        
+    <input type="submit" value="sign in" formmethod="post" formaction="/testapp/login2/">
+    
+    
+    {% csrf_token %}
+    
+
+</form>
+
+
+<span style="color: red ; font-size: 30px;"> {{message}} </span>

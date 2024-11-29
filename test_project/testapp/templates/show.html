@@ -1,0 +1,33 @@
+
+<html>  
+<head>  
+   
+    <title>Student Records</title>  
+     
+</head>  
+
+<body>  
+<table>  
+      
+    <tr>  
+        <th>Roll Number</th>  
+        <th>Marks</th>  
+      
+    </tr>  
+          
+{% for student in students %}  
+    <tr>  
+        <td>{{ student.rno }}</td>  
+        <td>{{ student.marks }}</td>  
+              
+    </tr>  
+{% endfor %}  
+      
+</table>  
+<br>  
+<br>  
+
+<center><a href="/testapp/generateForm/">Add New Record</a> </center> 
+
+</body>  
+</html>  

@@ -1,0 +1,21 @@
+<style>
+    input{
+        display: block;
+        padding: 6px;
+        margin: 10px;
+        text-align:left}
+     
+</style>
+
+<form class="login">
+    <h1>login page</h1>
+    <input placeholder="Enter user name" name="username">
+
+    <input type="password" placeholder="Enter password" name="password">
+    
+    <input type="submit" value="sign in "  formaction="/testapp/login/" formmethod="post">
+    <input type="submit" value="sign up " formaction="/testapp/save/">
+    {% csrf_token %}
+</form>
+
+<span style="color: red; font-size: large;"> {{message}} </span>

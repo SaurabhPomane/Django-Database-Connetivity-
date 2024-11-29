@@ -1,0 +1,21 @@
+<form>
+
+    <input   placeholder="Enter user name"   name="username"    value="{{userdata.username}}" ><br><br>
+
+    <input  type="password" placeholder="Enter password" name="password"    value="{{userdata.password}}"><br><br>
+
+    <input placeholder="Enter mobile number" name="mobno"    value="{{userdata.mobno}}" ><br><br>
+
+    
+    <input    type="submit"        value="add"       formaction="/testapp/add">
+
+    <input     type="submit"      value="update"     formaction="/testapp/update">
+
+    <input     type="submit"      value="delette"     formaction="/testapp/delette">
+
+    <input     type="submit"       value="view"      formaction="/testapp/view">
+    
+   
+</form>
+
+<span style="color: red; font-size: large;"> {{message}} </span>

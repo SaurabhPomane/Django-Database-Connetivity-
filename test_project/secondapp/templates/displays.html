@@ -1,0 +1,19 @@
+<form action="/secondapp/display/">
+</form>
+<table>
+    <tr>
+      <th>username</th>
+      <th>password</th>
+      <th>mobno</th>
+      <th>delete</th>
+    </tr>
+    {% for dict in data %}
+    <tr>
+        <td>{{dict.username}}</td>
+        <td>{{dict.password}}</td>
+        <td>{{dict.mono}}</td>
+        <td><a href="/secondapp/delete/{{dict.username}}">delete</a></td>
+    </tr>
+
+    {% endfor %}
+</table>

@@ -1,0 +1,9 @@
+<form method="POST" action="/testapp/generateForm/">
+
+    {% csrf_token %}
+
+    {{form.as_p}}  <!-- 2 input boxes will appear here at runtime -->
+
+    <button type="submit">save</button>
+
+</form>
